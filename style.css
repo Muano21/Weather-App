@@ -9,6 +9,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: black;
 }
 .first-page{
     background: black;
@@ -53,8 +54,8 @@ h2{
 }
 .search-page{
     width: 100%;
-    height: 100dvh;
-    background: black;
+    height: fit-content;
+    background: transparent;
     justify-content: center;
     align-items: center;
     display: none;
@@ -114,6 +115,8 @@ h2{
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    background: transparent;
+    height: fit-content;
 }
 .newsearch{
     display: block;
