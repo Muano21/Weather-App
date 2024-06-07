@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+       <div class="allPage">
         <div class="first-page">
             <img src="https://i.pinimg.com/236x/4b/f3/3c/4bf33ca6c7a67bd1117ef1b8c43c6199.jpg" alt="" width="130em">
             <h1>Breeze</h1>
@@ -18,6 +19,9 @@
         </div>
 
         <div class="search-page second-page">
+            <div class="search-error">
+                <p>Invalid input</p>
+            </div>
             <div class="search-input">
                 <span>
                     <input type="search" name="search" id="search" placeholder="Enter city">
@@ -32,6 +36,42 @@
                 </div>
             </div>
         </div>
+
+        <div class="third-page">
+            <div class="visual">
+                <h3>Madrid</h3>
+                <img src="images/clear.png" alt="" class="weather-img">
+                <p class="temp">temp condition</p>
+            </div>
+            <div class="weather-info">
+                <div>
+                    <div class="grid">
+                        <p class="write-up uv-index">UV INDEX</p>
+                        <p class="mini uv"></p>
+                    </div>
+                    
+                    <div class="grid">
+                        <P class="write-up humidity">HUMIDITY</P>
+                        <p class="mini hum"></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid">
+                        <p class="write-up wind">WIND</p>
+                        <p class="mini windword"></p>
+                    </div>
+
+                    <div class="grid">
+                        <p class="write-up visibility">VISIBILITY</p>
+                        <p class="mini visi"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+       <div class="allError">
+        <p>Can not find source try again!</p>
+       </div>
     </div>
 </body>
 </html>
