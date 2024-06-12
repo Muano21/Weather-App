@@ -16,10 +16,11 @@ const wind = document.querySelector(".windword");
 const humidity = document.querySelector(".hum");
 const visibility = document.querySelector(".visi");
 const uvIndex = document.querySelector(".uv");
-
 const allError = document.querySelector(".allError");
 const allPage = document.querySelector(".allPage");
-const temps = document.querySelector(".temp");
+const tempDisplay = document.querySelector(".tempDisplay");
+const secondArrow = document.querySelector(".second-arrow");
+const thirdArrow = document.querySelector(".third-arrow");
 
 
 
@@ -86,7 +87,7 @@ async function weatherSearch(city){
     humidity.textContent = data.main.humidity + " %";
     uvIndex.textContent = data.sys.type; 
     visibility.textContent = data.visibility + " km";
-    temps.textContent = data.weather[0].main;
+    tempDisplay.innerHTML = data.weather[0].main;
 
 
     if(data.weather[0].main === "Clouds") {
@@ -123,13 +124,22 @@ function pageFunc(){
         weatherSearch(search.value);
     })
 
-    newSearch.addEventListener("click", ()=>{
+    result.addEventListener("click", ()=>{
         firstPage.style.display = "none";
         secondPage.style.display = "none";
-        thirdPage.classList.add("third");
         thirdPage.style.display = "block";
 
         checkWeather(search.value);
+    })
+    secondArrow.addEventListener("click", ()=>{
+      firstPage.style.display = "grid";
+      secondPage.style.display = "none";
+      thirdPage.style.display = "none";
+    })
+    thirdArrow.addEventListener("click", ()=>{
+      firstPage.style.display = "none";
+      secondPage.style.display = "block";
+      thirdPage.style.display = "none";
     })
 
 
